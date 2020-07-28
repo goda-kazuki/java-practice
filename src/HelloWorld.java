@@ -1,22 +1,12 @@
 public class HelloWorld {
     public static void main(String[] args) {
+        Empolyee empolyee = new Empolyee(24, "ごうだ", 100);
 
-        int[] array = {1, 3, 5};
+        System.out.println(empolyee.getEmpolyeeID());
 
-        for (int i : array) {
-            if (i == 5) {
-                break;
-            }
+        System.out.println(empolyee.getName());
 
-            System.out.println(i);
-        }
-
-        for (int i = 0; i < 3; i++) {
-            if (i == 1) {
-                break;
-            }
-            System.out.println(i);
-        }
+        System.out.println(empolyee.getAge());
 
     }
 }

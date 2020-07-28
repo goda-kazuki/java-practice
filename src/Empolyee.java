@@ -1,13 +1,18 @@
 public class Empolyee extends Person {
-    private String company;
+    private int empolyeeID;
 
-    public Empolyee(int age, String name, String company) {
+    public Empolyee(int age, String name, int eid) {
         super(age, name);
-        this.company = company;
+        empolyeeID = eid;
     }
 
-    public void printCompany() {
-        System.out.println(company);
+    public void setEmpolyeeID(int eid) {
+        empolyeeID = eid;
+    }
+
+
+    public int getEmpolyeeID() {
+        return empolyeeID;
     }
 
 }
