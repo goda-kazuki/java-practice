@@ -1,11 +1,11 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        int height = 300;
-        int weight = 200;
-        System.out.println(height + weight);
+        Empolyee empolyee = new Empolyee(10, "kizuka", "合田");
 
-        String halloWorld = "はろーわーるど";
+        empolyee.printAge();
 
-        System.out.println(halloWorld);
+        empolyee.printName();
+
+        empolyee.printCompany();
     }
 }
