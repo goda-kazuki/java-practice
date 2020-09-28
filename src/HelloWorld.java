@@ -1,13 +1,28 @@
+import java.sql.*;
+
 public class HelloWorld {
 
     public static void main(String[] args) {
-        myPrint(1, "3", "ご", "なな");
-        myPrint("いっち");
-    }
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
 
-    public static void myPrint(Object... args) {
-        for (Object s : args) {
-            System.out.println(s);
+        try {
+            con = DriverManager.getConnection(
+                    "jdbc:mysql://127.0.0.1:3307/docker_core",
+                    "docker_core",
+                    "docker_core"
+            );
+
+            pstmt = con.prepareStatement("select * from shops");
+
+            rs=pstmt.executeQuery();
+
+            while (rs.next()){
+                System.out.println(rs.getString("kana"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }
