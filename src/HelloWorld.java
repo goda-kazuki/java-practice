@@ -1,21 +1,24 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class HelloWorld {
 
     public static void main(String[] args) {
-        List<String> list = new ArrayList<String>() {
-            {
-                add("D");
-                add("E");
-                add("F");
+        Map<String, Integer> map = new HashMap<String, Integer>();
 
-            }
-        };
+        map.put("name", 5);
+        map.put("last", 3);
 
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-        }
+        System.out.println(map.get("name"));
+
+        int number = 10;
+
+        System.out.println(number);
+
+        Integer integer = 100;
+
+        System.out.println(integer.compareTo(100));
+
 
     }
 }
